@@ -1,72 +1,73 @@
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
+  font-synthesis:none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+// basic global CSS reset for better alignment of box elements
+* {
+  box-sizing: border-box;
 }
 
-body {
+
+ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  gap: 0.4rem;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+// global hx reset due to prevent default margins from user agent stylesheets to collide with custom styling
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+a {
+  text-decoration:none;
+}
+
+// global CSS reset for diffrent UI elements that come with deeply embedded standard stylings
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  cursor: pointer;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  font-size: var(--button-font-size-main);
+  padding: 0;
+  border: none;
+  outline: none;
+  color: inherit;
+  background: none;
 }
 `
