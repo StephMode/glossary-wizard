@@ -24,7 +24,7 @@ ul {
 }
 
 // global hx reset due to prevent default margins from user agent stylesheets to collide with custom styling
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
