@@ -23,13 +23,13 @@ describe('Unit test for HomePage', () => {
     test('Has main that holds the main contents outline with ally description', () => {
         const main = screen.getByRole('main')
         expect(main).toBeInTheDocument();
-        expect(main).not.toHaveAccessibleDescription() 
+        expect(main).toHaveAttribute('aria-label') 
     })
 
     test('Has aside that serving as the main contents outline with ally description', () => {
         const aside = screen.getByRole('complementary')
         expect(aside).toBeInTheDocument();
-        expect(aside).not.toHaveAccessibleDescription()
+        expect(aside).toHaveAttribute('aria-label')
         })
 
 })
