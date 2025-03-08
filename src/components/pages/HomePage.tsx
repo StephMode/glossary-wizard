@@ -20,7 +20,7 @@ export default function HomePage() {
         </nav>
       </StyledHeader>
       <StyledPageOverlay>
-        <StyledPageNav>
+        <StyledPageNav aria-label="page-navigation">
           <StyledPageNavList>
             <li>
               <h3>Preliminary Definitions</h3>
@@ -32,7 +32,7 @@ export default function HomePage() {
             </li>
           </StyledPageNavList>
         </StyledPageNav>
-        <main>
+        <main aria-label="main-content">
           <h1>Project Glossary</h1>
           <h2>Preliminary Definitions</h2>
           <h3>Basic Defintions</h3>
@@ -52,7 +52,7 @@ export default function HomePage() {
             sunt modi voluptatem odio!
           </p>
         </main>
-        <aside>
+        <aside aria-label="page-outline">
           <h3>On This Page</h3>
           <h4>Preliminary Definitions</h4>
           <h5>Basic Defintions</h5>
