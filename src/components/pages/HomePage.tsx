@@ -10,8 +10,12 @@ export default function HomePage() {
             <li>
               <button>Edit/Read Mode</button>
             </li>
-            <li>About</li>
-            <li>GitHub</li>
+            <li>
+              <a href="">About</a>
+            </li>
+            <li>
+              <a href="">GitHub</a>
+            </li>
           </ul>
         </nav>
       </StyledHeader>
@@ -81,17 +85,18 @@ const StyledPageOverlay = styled.div`
   display: grid;
   grid-template-columns: 20% 65% 15%;
   gap: 5px;
-`;
-
-const StyledPageNav = styled.div`
   border: 3px solid black;
   border-radius: 10px;
+`;
+
+const StyledPageNav = styled.nav`
+  margin: 3px;
   padding: 10px;
+  border: 3px solid black;
+  border-radius: 10px;
 `;
 
 const StyledPageMain = styled.main`
-  border: 3px solid black;
-  border-radius: 10px;
   padding: 10px;
 `;
 
