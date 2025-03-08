@@ -32,7 +32,7 @@ export default function HomePage() {
             </li>
           </StyledPageNavList>
         </StyledPageNav>
-        <StyledPageMain>
+        <main>
           <h1>Project Glossary</h1>
           <h2>Preliminary Definitions</h2>
           <h3>Basic Defintions</h3>
@@ -51,7 +51,7 @@ export default function HomePage() {
             tempore dolorum necessitatibus quos, quasi, earum, iure cupiditate
             sunt modi voluptatem odio!
           </p>
-        </StyledPageMain>
+        </main>
         <aside>
           <h3>On This Page</h3>
           <h4>Preliminary Definitions</h4>
@@ -67,7 +67,7 @@ export default function HomePage() {
 
 const StyledPageWrapper = styled.div`
   display: grid;
-  grid-template-rows: 80px 600px;
+  grid-template-rows: 70px 600px;
   gap: 5px;
 `;
 
@@ -78,7 +78,7 @@ const StyledHeader = styled.header`
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 5px;
 `;
 
 const StyledPageOverlay = styled.div`
@@ -87,6 +87,7 @@ const StyledPageOverlay = styled.div`
   gap: 5px;
   border: 3px solid black;
   border-radius: 10px;
+  padding: 10px;
 `;
 
 const StyledPageNav = styled.nav`
@@ -94,10 +95,6 @@ const StyledPageNav = styled.nav`
   padding: 10px;
   border: 3px solid black;
   border-radius: 10px;
-`;
-
-const StyledPageMain = styled.main`
-  padding: 10px;
 `;
 
 const StyledPageNavList = styled.ul`

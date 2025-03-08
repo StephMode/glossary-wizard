@@ -28,8 +28,15 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+// global p reset due to prevent default margins from user agent stylesheets to collide with custom styling
+p {
+  margin: 0;
+}
+
+
 a {
   text-decoration:none;
+  color: black;
 }
 
 // global CSS reset for diffrent UI elements that come with deeply embedded standard stylings
