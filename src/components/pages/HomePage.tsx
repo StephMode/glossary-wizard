@@ -67,7 +67,7 @@ export default function HomePage() {
 
 const StyledPageWrapper = styled.div`
   display: grid;
-  grid-template-rows: 70px 600px;
+  grid-template-rows: 55px 600px;
   gap: 5px;
 `;
 
@@ -78,7 +78,8 @@ const StyledHeader = styled.header`
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
+  padding: 5px 15px;
+  font-size: 1.3rem;
 `;
 
 const StyledPageOverlay = styled.div`
@@ -93,12 +94,11 @@ const StyledPageOverlay = styled.div`
 const StyledPageNav = styled.nav`
   margin: 3px;
   padding: 10px;
-  border: 3px solid black;
+  border: 2px solid black;
   border-radius: 10px;
 `;
 
 const StyledPageNavList = styled.ul`
   flex-flow: column nowrap;
-  padding: 5px;
   gap: 0.6rem;
 `;
