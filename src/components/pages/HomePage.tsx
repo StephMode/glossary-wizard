@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from "../ui/Button";
 
 export default function HomePage() {
   return (
@@ -8,7 +9,7 @@ export default function HomePage() {
         <nav aria-label="main-navigation">
           <ul>
             <li>
-              <button>Edit/Read Mode</button>
+              <Button buttonRole="Edit/Read Mode" theme="main-theme" />
             </li>
             <li>
               <a href="">About</a>
