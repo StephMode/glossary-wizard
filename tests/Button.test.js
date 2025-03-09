@@ -2,21 +2,25 @@ import Button from "../src/components/ui/Button";
 import { render, screen } from "@testing-library/react";
 
 describe(`Unit Test for ${Button.name} component`, () => {
+  const toggleButtonText = "Edit/Read Mode";
+
   beforeEach(() => {
-    render(<Button />);
+    render(
+      <Button theme={"main-theme"} buttonRole={toggleButtonText}>
+        {toggleButtonText}
+      </Button>
+    );
   });
 
-  test("Renders an element of role button", () => {
+  test("Renders an element of role button.", () => {
     expect(screen.getByRole("button")).toBeInTheDocument();
   });
 
-  test("Has text content based on prop passed with the example of the toggle button", () => {
-    const toggleButton = screen.getByRole("button").textContent;
-    expect(toggleButton).toHaveAttribute("buttonRole");
-    expect(toggleButton).toBe("Edit/Read Mode");
+  it("Has text-content according to the role of the button.", () => {
+    expect(screen.getByRole("button").textContent).toBe(toggleButtonText);
   });
 
-  test("Has a primary theme", () => {
-    expect(screen.getByRole("button")).toHaveAttribute("theme");
+  it("Has a primary theme.", () => {
+    expect(screen.getByRole("button")).toHaveClass("main-theme");
   });
 });
