@@ -2,11 +2,11 @@ import { styled } from "styled-components";
 
 type ButtonComponentProps = {
   buttonRole: string;
-  theme: string;
+  theme: "main" | "secondary";
 };
 
 export default function Button({ buttonRole, theme }: ButtonComponentProps) {
-  return <StyledButton className={theme}>{buttonRole}</StyledButton>;
+  return <StyledButton className={`${theme}-theme`}>{buttonRole}</StyledButton>;
 }
 
 const StyledButton = styled.button`
