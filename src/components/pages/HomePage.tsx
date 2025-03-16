@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Button from "../ui/Button";
+import Form from "../layout/Form";
 
 export default function HomePage() {
   return (
@@ -52,6 +53,7 @@ export default function HomePage() {
             tempore dolorum necessitatibus quos, quasi, earum, iure cupiditate
             sunt modi voluptatem odio!
           </p>
+          <Form></Form>
         </main>
         <aside aria-label="page-outline">
           <h3>On This Page</h3>
