@@ -10,7 +10,7 @@ export default function HomePage() {
         <nav aria-label="main-navigation">
           <ul>
             <li>
-              <Button buttonRole="Edit/Read Mode" theme="main-theme" />
+              <Button buttonRole="Edit/Read Mode" theme="main" />
             </li>
             <li>
               <a href="">About</a>
@@ -53,7 +53,7 @@ export default function HomePage() {
             tempore dolorum necessitatibus quos, quasi, earum, iure cupiditate
             sunt modi voluptatem odio!
           </p>
-          <Form></Form>
+          <Form />
         </main>
         <aside aria-label="page-outline">
           <h3>On This Page</h3>
