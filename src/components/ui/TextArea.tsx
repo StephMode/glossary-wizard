@@ -1,12 +1,13 @@
 type TextAreaComponentProps = {
   label: string;
+  name: "articleTextBody";
 };
 
-export default function TextArea({ label }: TextAreaComponentProps) {
+export default function TextArea({ label, name }: TextAreaComponentProps) {
   return (
     <label>
       {label}
-      <textarea></textarea>
+      <textarea name={name} id={name}></textarea>
     </label>
   );
 }

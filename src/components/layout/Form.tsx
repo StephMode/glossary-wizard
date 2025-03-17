@@ -23,8 +23,8 @@ export default function Form() {
   }
   return (
     <form onSubmit={handleSubmit}>
-      <TextInput label="title" />
-      <TextArea label="text body" />
+      <TextInput label="title" name="articleHeading" />
+      <TextArea label="text body" name="articleTextBody" />
       <Button buttonRole="save" theme="secondary" />
     </form>
   );
