@@ -67,7 +67,10 @@ export default function HomePage() {
           )}
           {showAddEntryForm && (
             <>
-              <Form formType="add" />
+              <Form
+                formType="add"
+                formToggle={() => setShowAddEntryForm(!showAddEntryForm)}
+              />
               <Button
                 buttonRole="cancel"
                 theme="secondary"
