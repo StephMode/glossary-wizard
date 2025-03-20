@@ -53,7 +53,7 @@ export default function HomePage() {
             tempore dolorum necessitatibus quos, quasi, earum, iure cupiditate
             sunt modi voluptatem odio!
           </p>
-          <Form />
+          <Form formType="add" />
         </main>
         <aside aria-label="page-outline">
           <h3>On This Page</h3>
