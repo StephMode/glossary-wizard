@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import Button from "../ui/Button";
 import Form from "../layout/Form";
+import { useState } from "react";
 
 export default function HomePage() {
+  const [showAddEntryForm, setShowAddEntryForm] = useState(false);
+
   return (
     <StyledPageWrapper>
       <StyledHeader>
@@ -53,7 +56,27 @@ export default function HomePage() {
             tempore dolorum necessitatibus quos, quasi, earum, iure cupiditate
             sunt modi voluptatem odio!
           </p>
-          <Form formType="add" />
+          {!showAddEntryForm && (
+            <Button
+              buttonRole="Add Entry"
+              theme="secondary"
+              onClick={() => {
+                setShowAddEntryForm(!showAddEntryForm);
+              }}
+            />
+          )}
+          {showAddEntryForm && (
+            <>
+              <Form formType="add" />
+              <Button
+                buttonRole="cancel"
+                theme="secondary"
+                onClick={() => {
+                  setShowAddEntryForm(!showAddEntryForm);
+                }}
+              />
+            </>
+          )}
         </main>
         <aside aria-label="page-outline">
           <h3>On This Page</h3>
