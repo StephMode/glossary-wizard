@@ -2,11 +2,20 @@ import { styled } from "styled-components";
 
 type ButtonComponentProps = {
   buttonRole: string;
-  theme: string;
+  theme: "main" | "secondary";
+  onClick?: () => void;
 };
 
-export default function Button({ buttonRole, theme }: ButtonComponentProps) {
-  return <StyledButton className={theme}>{buttonRole}</StyledButton>;
+export default function Button({
+  buttonRole,
+  theme,
+  onClick,
+}: ButtonComponentProps) {
+  return (
+    <StyledButton className={`${theme}-theme`} onClick={onClick}>
+      {buttonRole}
+    </StyledButton>
+  );
 }
 
 const StyledButton = styled.button`
