@@ -1,6 +1,6 @@
 type TextInputComponentProps = {
   label: string;
-  name: "articleHeading";
+  name: string;
 };
 
 export default function TextInput({ label, name }: TextInputComponentProps) {

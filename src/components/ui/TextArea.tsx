@@ -1,6 +1,6 @@
 type TextAreaComponentProps = {
   label: string;
-  name: "articleTextBody";
+  name: string;
 };
 
 export default function TextArea({ label, name }: TextAreaComponentProps) {
