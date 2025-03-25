@@ -9,8 +9,8 @@ type FormComponentProps = {
 };
 
 interface CustomElements extends HTMLFormControlsCollection {
-  articleHeading: HTMLInputElement;
-  articleTextBody: HTMLInputElement;
+  entryHeading: HTMLInputElement;
+  entryTextBody: HTMLInputElement;
 }
 
 interface CustomForm extends HTMLFormElement {
@@ -22,8 +22,8 @@ export default function Form({ formType, formToggle }: FormComponentProps) {
     event.preventDefault();
     const target = event.currentTarget.elements;
     const formData = {
-      articleHeading: target.articleHeading.value,
-      articleTextBody: target.articleTextBody.value,
+      entryHeading: target.entryHeading.value,
+      entryTextBody: target.entryTextBody.value,
     };
     console.log("data", formData);
     formToggle();
@@ -37,8 +37,8 @@ export default function Form({ formType, formToggle }: FormComponentProps) {
   return (
     <StyledForm onSubmit={handleSubmit}>
       <h3>{formatFormTypeText(formType)}</h3>
-      <TextInput label="title" name="articleHeading" />
-      <TextArea label="text body" name="articleTextBody" />
+      <TextInput label="title" name="entryHeading" />
+      <TextArea label="text body" name="entryTextBody" />
       <Button buttonRole="save" theme="secondary" />
     </StyledForm>
   );
