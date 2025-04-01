@@ -1,0 +1,41 @@
+.home-page--page-wrapper {
+    display: grid;
+    grid-template-rows: 55px 600px;
+    gap: 5px;
+}
+
+.home-page--header {
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    font-size: 1.3rem;
+}
+
+.home-page--header--nav-link-bar {
+    align-items: center;
+}
+
+.home-page--page-overlay {
+    display: grid;
+    grid-template-columns: 20% 65% 15%;
+    gap: 5px;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.home-page--page-navigation {
+    margin: 3px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.home-page--page-navigation-list {
+    flex-flow: column nowrap;
+    gap: 0.6rem;
+}

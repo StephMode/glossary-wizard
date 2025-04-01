@@ -1,17 +1,17 @@
-import styled from "styled-components";
 import Button from "../ui/Button";
 import Form from "../layout/Form";
 import { useState } from "react";
+
 
 export default function HomePage() {
   const [showAddEntryForm, setShowAddEntryForm] = useState(false);
 
   return (
-    <StyledPageWrapper>
-      <StyledHeader>
+    <div className="home-page--page-wrapper">
+      <header className="home-page--header">
         <p>Logo</p>
         <nav aria-label="main-navigation">
-          <ul>
+          <ul className="home-page--header--nav-link-bar">
             <li>
               <Button buttonRole="Edit/Read Mode" theme="main" />
             </li>
@@ -23,10 +23,10 @@ export default function HomePage() {
             </li>
           </ul>
         </nav>
-      </StyledHeader>
-      <StyledPageOverlay>
-        <StyledPageNav aria-label="page-navigation">
-          <StyledPageNavList>
+      </header>
+      <div className="home-page--page-overlay">
+        <nav className="home-page--page-navigation" aria-label="page-navigation">
+          <ul className="home-page--page-navigation-list">
             <li>
               <h3>Preliminary Definitions</h3>
               <h4>Basic Defintions</h4>
@@ -35,8 +35,8 @@ export default function HomePage() {
               <h3>Preliminary Definitions</h3>
               <h4>Basic Defintions</h4>
             </li>
-          </StyledPageNavList>
-        </StyledPageNav>
+          </ul>
+        </nav>
         <main aria-label="main-content">
           <h1>Project Glossary</h1>
           <h2>Preliminary Definitions</h2>
@@ -88,46 +88,8 @@ export default function HomePage() {
           <h4>Preliminary Definitions</h4>
           <h5>Basic Defintions</h5>
         </aside>
-      </StyledPageOverlay>
+      </div>
       <footer></footer>
-    </StyledPageWrapper>
+    </div>
   );
 }
-
-const StyledPageWrapper = styled.div`
-  display: grid;
-  grid-template-rows: 55px 600px;
-  gap: 5px;
-`;
-
-const StyledHeader = styled.header`
-  border: 3px solid black;
-  border-radius: 10px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 15px;
-  font-size: 1.3rem;
-`;
-
-const StyledPageOverlay = styled.div`
-  display: grid;
-  grid-template-columns: 20% 65% 15%;
-  gap: 5px;
-  border: 3px solid black;
-  border-radius: 10px;
-  padding: 10px;
-`;
-
-const StyledPageNav = styled.nav`
-  margin: 3px;
-  padding: 10px;
-  border: 2px solid black;
-  border-radius: 10px;
-`;
-
-const StyledPageNavList = styled.ul`
-  flex-flow: column nowrap;
-  gap: 0.6rem;
-`;
