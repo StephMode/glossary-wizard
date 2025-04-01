@@ -1,7 +1,6 @@
 import TextInput from "../ui/TextInput.tsx";
 import TextArea from "../ui/TextArea.tsx";
 import Button from "../ui/Button.tsx";
-import styled from "styled-components";
 
 type FormComponentProps = {
   formType: string;
@@ -35,24 +34,11 @@ export default function Form({ formType, formToggle }: FormComponentProps) {
   }
 
   return (
-    <StyledForm onSubmit={handleSubmit}>
+    <form className="form--layout" onSubmit={handleSubmit}>
       <h3>{formatFormTypeText(formType)}</h3>
       <TextInput label="title" name="entryHeading" />
       <TextArea label="text body" name="entryTextBody" />
       <Button buttonRole="save" theme="secondary" />
-    </StyledForm>
+    </form>
   );
 }
-
-const StyledForm = styled.form`
-  display: flex;
-  flex-flow: column nowrap;
-  max-width: 300px;
-  height: 150px;
-  align-items: baseline;
-  justify-content: space-between;
-  margin: 10px;
-  padding: 5px;
-  border: 2px solid lightblue;
-  border-radius: 5px;
-`;

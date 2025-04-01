@@ -1,0 +1,12 @@
+.form--layout {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 300px;
+    height: 150px;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid lightblue;
+    border-radius: 5px;
+}
