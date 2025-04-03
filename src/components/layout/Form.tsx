@@ -29,12 +29,11 @@ export default function Form({ formType, formToggle }: FormComponentProps) {
     };
     if (!formData.entryHeading || !formData.entryTextBody) {
       if (!formData.entryHeading && !formData.entryTextBody) {
-        setErrorState([...errorState, "entryHeading", "entryTextBody"]);
+        setErrorState(["entryHeading", "entryTextBody"]);
       } else if (!formData.entryHeading) {
-        console.error("no heading given");
-        setErrorState([...errorState, "entryHeading"]);
+        setErrorState(["entryHeading"]);
       } else {
-        setErrorState([...errorState, "entryTextBody"]);
+        setErrorState(["entryTextBody"]);
       }
       return;
     }
@@ -48,10 +47,6 @@ export default function Form({ formType, formToggle }: FormComponentProps) {
     return `${capitalizedWord} Entry`;
   }
 
-  useEffect(() => {
-    console.log(errorState);
-  }, [errorState]);
-
   return (
     <form className="form--layout" onSubmit={handleSubmit}>
       <h3>{formatFormTypeText(formType)}</h3>
@@ -60,7 +55,11 @@ export default function Form({ formType, formToggle }: FormComponentProps) {
         name="entryHeading"
         errorTheme={errorState.includes("entryHeading") ? true : false}
       />
-      <TextArea label="text body" name="entryTextBody" />
+      <TextArea
+        label="text body"
+        name="entryTextBody"
+        errorTheme={errorState.includes("entryTextBody") ? true : false}
+      />
       <Button buttonRole="save" theme="secondary" />
     </form>
   );
