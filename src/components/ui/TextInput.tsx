@@ -1,13 +1,14 @@
-import { useState } from "react";
-
 type TextInputComponentProps = {
   label: string;
   name: string;
+  errorTheme: boolean;
 };
 
-export default function TextInput({ label, name }: TextInputComponentProps) {
-  const [inputErrorWarning, setInputErrorWarning] = useState(false);
-
+export default function TextInput({
+  label,
+  name,
+  errorTheme,
+}: TextInputComponentProps) {
   return (
     <label>
       {label}
@@ -15,8 +16,7 @@ export default function TextInput({ label, name }: TextInputComponentProps) {
         type="text"
         id={name}
         name={name}
-        className={inputErrorWarning ? "error-theme" : ""}
-        onChange={() => setInputErrorWarning(false)}
+        className={errorTheme ? "error-theme" : ""}
       ></input>
     </label>
   );
